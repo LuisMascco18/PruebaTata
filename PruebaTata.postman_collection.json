@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "ddd62a07-0380-4baf-99fe-201050a8cbf2",
+		"name": "PruebaTata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CambiarMoneda",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monedaOrigen\":\"sol\",\r\n    \"monto\":100,\r\n    \"monedaDestino\":\"dolar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/moneda/cambiarMoneda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"moneda",
+						"cambiarMoneda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarTipoCambio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/moneda/listarTipoCambio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"moneda",
+						"listarTipoCambio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarTipoCambio",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"primeraMoneda\":\"dolar\",\r\n    \"tasaCambio\":3.78,\r\n    \"segundaMoneda\":\"sol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/moneda/actualizarTipoCambio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"moneda",
+						"actualizarTipoCambio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
